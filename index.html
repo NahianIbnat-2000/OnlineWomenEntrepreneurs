@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Online Women Entrepreneurs During COVID-19 | Nahian Ibnat </title>
+<title>Online Women Entrepreneurs During COVID-19 | Nahian Ibnat Anan</title>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <style>
@@ -397,6 +397,63 @@
   .limit-list li:last-child { border-bottom: none; }
   .limit-list .dot { color: var(--accent); font-size: 18px; line-height: 1.4; flex-shrink: 0; }
 
+  /* ── TIME BANNER ── */
+  .time-banner {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: #2C1A0E;
+    color: #E0C8A8;
+    border-left: 4px solid var(--accent-warm);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 32px 0 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .time-banner strong { color: var(--accent-light); }
+  .time-icon { font-size: 22px; flex-shrink: 0; padding-top: 2px; }
+
+  /* ── CONTEXT NOTE ── */
+  .context-note {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: var(--cream-deep);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 24px 0 0;
+    font-size: 14px;
+    color: var(--ink-muted);
+    line-height: 1.65;
+  }
+  .context-note strong { color: var(--ink); }
+  .context-icon { font-size: 22px; flex-shrink: 0; padding-top: 2px; }
+
+  /* ── FOLLOW-UP BOX ── */
+  .followup-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px;
+    margin-top: 28px;
+  }
+  .followup-header {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 14px;
+  }
+  .followup-list {
+    margin: 0 0 14px;
+    padding-left: 20px;
+    color: var(--ink-muted);
+    font-size: 14px;
+  }
+  .followup-list li { margin-bottom: 8px; line-height: 1.5; }
+
   /* ── FOOTER ── */
   .footer {
     background: var(--bg-dark);
@@ -438,7 +495,7 @@
   <h1>Online Women Entrepreneurs<br>during the <em>COVID-19 Pandemic</em></h1>
   <p class="hero-sub">A study on Chittagong City, Bangladesh</p>
   <div class="hero-meta">
-    <span><b>Author</b> Nahian Ibnat </span>
+    <span><b>Author</b> Nahian Ibnat</span>
     <span><b>Course</b> ECON3253: Research Methodology</span>
     <span><b>Institution</b> Asian University for Women</span>
   </div>
@@ -448,6 +505,14 @@
 </section>
 
 <main class="page">
+
+  <!-- TIME BANNER -->
+  <div class="time-banner">
+    <span class="time-icon">🕰</span>
+    <div>
+      <strong>Reading this in 2026?</strong> This research was conducted in <strong>Fall 2021</strong>, during the active COVID-19 pandemic period. All findings, percentages, and business figures reflect that specific moment in time. The landscape for online businesses in Bangladesh has shifted significantly since then.
+    </div>
+  </div>
 
   <!-- ABSTRACT -->
   <section class="section">
@@ -472,6 +537,13 @@
       <div class="stat-card">
         <span class="num">84%</span>
         <div class="label">Said it is possible to continue after COVID</div>
+      </div>
+    </div>
+
+    <div class="context-note">
+      <span class="context-icon">🏠</span>
+      <div>
+        <strong>A note on class context.</strong> 66% of respondents had domestic help (housemaids). In Bangladesh, hiring domestic workers is largely a middle-class and upper-middle-class practice, concentrated in urban areas. ILO estimates place the total domestic workforce in Bangladesh at around 2 million, almost entirely employed by urban households. This means the sample in this paper skews toward women who already had economic advantages: smartphones, internet access, time freed up by paid help, and family networks that could support a new business. The online entrepreneurship boom documented here was not equally available to all women in Chittagong. It was largely a middle-class phenomenon.
       </div>
     </div>
   </section>
@@ -694,6 +766,19 @@
     <p>For most of these women, yes. They started with low investment (often under BDT 20,000), got real customers through Facebook, and earned profits that most of them were satisfied with. The pandemic gave them a reason to start, and the support from family and housemaids gave them the time to do it.</p>
     <p>The weak correlation between the study's factors (business type, housemaid, family support) and the decision to continue suggests there are other things driving that decision, things this paper did not measure. That is where future research should go, with larger samples, better sampling methods, and more rigorous models.</p>
     <p>This paper is best read as a starting point, not a final answer. It was one of the first to look at online women entrepreneurs in Bangladesh during COVID-19, and that alone gives it value.</p>
+
+    <div class="followup-box">
+      <div class="followup-header">💡 A question worth asking in 2026</div>
+      <p style="max-width:none; font-size:14px; margin-bottom:12px;">It has been five years since this survey was conducted. If you still have contact with any of these 50 women, a short follow-up study could be very telling. Some questions worth asking:</p>
+      <ul class="followup-list">
+        <li>Is the business still running? If not, when did it close and why?</li>
+        <li>Did revenue hold up after COVID restrictions lifted, or did customers drift back to physical shops?</li>
+        <li>Did any of them shift platforms, from Facebook to TikTok, Instagram, or a formal e-commerce site?</li>
+        <li>Did the domestic help situation change? Did losing a housemaid affect the business?</li>
+        <li>Did any of them hire employees, expanding beyond a solo operation?</li>
+      </ul>
+      <p style="max-width:none; font-size:13px; color:#7A5535; margin:0;">Even a 20-question Google Form sent to the original contacts would create a small but genuine panel dataset: the same people, two time points, five years apart. That kind of longitudinal data on micro-entrepreneurship in Bangladesh is almost nonexistent in the published literature.</p>
+    </div>
   </section>
 
 </main>
@@ -723,11 +808,88 @@
     cream: '#FBF5EC'
   };
 
+  // Plugin: percentage labels on doughnut slices
+  const dataLabelPlugin = {
+    id: 'dataLabelPlugin',
+    afterDraw(chart) {
+      if (chart.config.type !== 'doughnut' && chart.config.type !== 'pie') return;
+      const { ctx } = chart;
+      chart.data.datasets.forEach((dataset, i) => {
+        const meta = chart.getDatasetMeta(i);
+        if (meta.hidden) return;
+        meta.data.forEach((arc, index) => {
+          const value = dataset.data[index];
+          if (!value || value < 4) return;
+          // get centroid of the arc
+          const cx = arc.x, cy = arc.y;
+          const startAngle = arc.startAngle;
+          const endAngle = arc.endAngle;
+          const midAngle = (startAngle + endAngle) / 2;
+          const outerR = arc.outerRadius;
+          const innerR = arc.innerRadius || 0;
+          const r = (outerR + innerR) / 2;
+          const x = cx + Math.cos(midAngle) * r;
+          const y = cy + Math.sin(midAngle) * r;
+          ctx.save();
+          ctx.fillStyle = '#fff';
+          ctx.font = 'bold 12px Inter, sans-serif';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.shadowColor = 'rgba(0,0,0,0.35)';
+          ctx.shadowBlur = 3;
+          ctx.fillText(value + '%', x, y);
+          ctx.restore();
+        });
+      });
+    }
+  };
+
+  // Plugin: percentage labels above/inside bars
+  const barLabelPlugin = {
+    id: 'barLabelPlugin',
+    afterDraw(chart) {
+      if (chart.config.type !== 'bar') return;
+      const { ctx } = chart;
+      const isHorizontal = chart.options.indexAxis === 'y';
+      const isStacked = chart.options.scales &&
+        ((isHorizontal ? chart.options.scales.x : chart.options.scales.y) || {}).stacked;
+      chart.data.datasets.forEach((dataset, i) => {
+        const meta = chart.getDatasetMeta(i);
+        if (meta.hidden) return;
+        meta.data.forEach((bar, index) => {
+          const value = dataset.data[index];
+          if (!value || value === 0) return;
+          ctx.save();
+          ctx.font = '600 11px Inter, sans-serif';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          if (isHorizontal && isStacked) {
+            if (value >= 10) {
+              const { x, y } = bar.tooltipPosition();
+              ctx.fillStyle = '#fff';
+              ctx.shadowColor = 'rgba(0,0,0,0.3)';
+              ctx.shadowBlur = 2;
+              ctx.fillText(value + '%', x, y);
+            }
+          } else if (!isHorizontal && !isStacked) {
+            const { x } = bar.tooltipPosition();
+            const top = bar.y - 12;
+            ctx.fillStyle = '#3A1F0A';
+            ctx.fillText(value + '%', x, top);
+          }
+          ctx.restore();
+        });
+      });
+    }
+  };
+
+  Chart.register(dataLabelPlugin, barLabelPlugin);
+
   // Business Type Doughnut
   new Chart(document.getElementById('bizChart'), {
     type: 'doughnut',
     data: {
-      labels: ['Cloth & Jewelleries', 'Bakery', 'Cosmetics', 'Organic Food', 'Henna', 'Graphic Design'],
+      labels: ['Cloth & Jewelleries (50%)', 'Bakery (22%)', 'Cosmetics (10%)', 'Organic Food (10%)', 'Henna (6%)', 'Graphic Design (2%)'],
       datasets: [{
         data: [50, 22, 10, 10, 6, 2],
         backgroundColor: [WARM.terracotta, WARM.amber, WARM.gold, WARM.sage, WARM.dustyRose, WARM.muted],
@@ -736,9 +898,10 @@
       }]
     },
     options: {
-      cutout: '60%',
+      cutout: '58%',
       plugins: {
-        legend: { position: 'bottom', labels: { font: { size: 11, family: 'Inter' }, padding: 12, color: '#5C3D25', boxWidth: 14 } }
+        legend: { position: 'bottom', labels: { font: { size: 11, family: 'Inter' }, padding: 10, color: '#5C3D25', boxWidth: 12 } },
+        tooltip: { callbacks: { label: ctx => ' ' + ctx.label } }
       }
     }
   });
@@ -758,8 +921,9 @@
     },
     options: {
       plugins: { legend: { display: false } },
+      layout: { padding: { top: 20 } },
       scales: {
-        y: { beginAtZero: true, ticks: { callback: v => v + '%', font: { size: 11 }, color: '#5C3D25' }, grid: { color: '#E8D5BC' } },
+        y: { beginAtZero: true, max: 45, ticks: { callback: v => v + '%', font: { size: 11 }, color: '#5C3D25' }, grid: { color: '#E8D5BC' } },
         x: { ticks: { font: { size: 11 }, color: '#5C3D25' }, grid: { display: false } }
       }
     }
@@ -777,18 +941,19 @@
     },
     options: {
       plugins: { legend: { position: 'bottom', labels: { font: { size: 11 }, color: '#5C3D25', boxWidth: 12, padding: 10 } } },
+      layout: { padding: { top: 20 } },
       scales: {
-        y: { beginAtZero: true, ticks: { callback: v => v + '%', font: { size: 11 }, color: '#5C3D25' }, grid: { color: '#E8D5BC' } },
+        y: { beginAtZero: true, max: 80, ticks: { callback: v => v + '%', font: { size: 11 }, color: '#5C3D25' }, grid: { color: '#E8D5BC' } },
         x: { ticks: { font: { size: 11 }, color: '#5C3D25' }, grid: { display: false } }
       }
     }
   });
 
-  // Started before/during COVID
+  // Started before/during COVID — doughnut with labels
   new Chart(document.getElementById('startChart'), {
     type: 'doughnut',
     data: {
-      labels: ['Started During COVID', 'Started Before COVID'],
+      labels: ['Started During COVID (60%)', 'Started Before COVID (40%)'],
       datasets: [{
         data: [60, 40],
         backgroundColor: [WARM.terracotta, WARM.muted],
@@ -797,23 +962,24 @@
       }]
     },
     options: {
-      cutout: '60%',
+      cutout: '58%',
       plugins: {
-        legend: { position: 'bottom', labels: { font: { size: 12, family: 'Inter' }, padding: 14, color: '#5C3D25', boxWidth: 14 } }
+        legend: { position: 'bottom', labels: { font: { size: 12, family: 'Inter' }, padding: 14, color: '#5C3D25', boxWidth: 14 } },
+        tooltip: { callbacks: { label: ctx => ' ' + ctx.label } }
       }
     }
   });
 
-  // Ratings horizontal bar
+  // Ratings stacked horizontal bar with inside labels
   new Chart(document.getElementById('ratingsChart'), {
     type: 'bar',
     data: {
-      labels: ['Experience of Business', 'Getting Customers', 'Customer Response', 'Profit Satisfaction'],
+      labels: ['Experience', 'Customers', 'Customer Response', 'Profit Satisfaction'],
       datasets: [
-        { label: 'Rating 5 (Best)', data: [22, 22, 50, 42], backgroundColor: WARM.terracotta, borderRadius: 3, borderWidth: 0 },
-        { label: 'Rating 4', data: [54, 52, 28, 34], backgroundColor: WARM.amber, borderRadius: 3, borderWidth: 0 },
-        { label: 'Rating 3', data: [22, 26, 22, 22], backgroundColor: WARM.gold, borderRadius: 3, borderWidth: 0 },
-        { label: 'Rating 2 (Low)', data: [2, 0, 0, 2], backgroundColor: WARM.muted, borderRadius: 3, borderWidth: 0 }
+        { label: 'Rating 5 – Best', data: [22, 22, 50, 42], backgroundColor: WARM.terracotta, borderWidth: 0 },
+        { label: 'Rating 4', data: [54, 52, 28, 34], backgroundColor: WARM.amber, borderWidth: 0 },
+        { label: 'Rating 3', data: [22, 26, 22, 22], backgroundColor: WARM.gold, borderWidth: 0 },
+        { label: 'Rating 2 – Low', data: [2, 0, 0, 2], backgroundColor: WARM.muted, borderWidth: 0 }
       ]
     },
     options: {
