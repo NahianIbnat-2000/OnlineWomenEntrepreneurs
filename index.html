@@ -119,6 +119,7 @@
   .section {
     padding: 64px 0 40px;
     border-bottom: 1px solid var(--border);
+    scroll-margin-top: 48px;
   }
   .section:last-of-type { border-bottom: none; }
 
@@ -454,6 +455,45 @@
   }
   .followup-list li { margin-bottom: 8px; line-height: 1.5; }
 
+  /* ── TOP NAV ── */
+  .topnav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg-dark);
+    border-bottom: 1px solid #3A2010;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .topnav::-webkit-scrollbar { display: none; }
+
+  .topnav-inner {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 16px;
+    white-space: nowrap;
+  }
+
+  .topnav a {
+    display: inline-block;
+    padding: 13px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #A08060;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+    letter-spacing: 0.01em;
+    flex-shrink: 0;
+  }
+
+  .topnav a:hover { color: var(--accent-light); }
+  .topnav a.active { color: var(--accent-warm); border-bottom-color: var(--accent-warm); }
+
   /* ── FOOTER ── */
   .footer {
     background: var(--bg-dark);
@@ -504,6 +544,19 @@
   </a>
 </section>
 
+<!-- STICKY NAV -->
+<nav class="topnav" id="topnav">
+  <div class="topnav-inner">
+    <a href="#overview">Overview</a>
+    <a href="#respondents">Respondents</a>
+    <a href="#findings">Key Findings</a>
+    <a href="#literature">Literature</a>
+    <a href="#methodology">Methodology</a>
+    <a href="#discussion">Discussion</a>
+    <a href="#conclusion">Conclusion</a>
+  </div>
+</nav>
+
 <main class="page">
 
   <!-- TIME BANNER -->
@@ -515,7 +568,7 @@
   </div>
 
   <!-- ABSTRACT -->
-  <section class="section">
+  <section class="section" id="overview">
     <p class="section-label">Overview</p>
     <h2>What is this paper about?</h2>
     <p>COVID-19 pushed Bangladesh's unemployment rate from 4.20% in 2019 to 5.30% in 2020. But inside that crisis, something interesting happened: women across Chittagong started businesses online. This paper asks two simple questions: what pushed them to start, and can they keep going after the pandemic ends?</p>
@@ -549,7 +602,7 @@
   </section>
 
   <!-- CHARTS: WHO ARE THEY -->
-  <section class="section">
+  <section class="section" id="respondents">
     <p class="section-label">The Respondents</p>
     <h2>Who are these entrepreneurs?</h2>
     <p>The 50 respondents ranged in age from 16 to 55. Most were young, married or single, and almost all were running their businesses entirely on Facebook or other social platforms.</p>
@@ -578,7 +631,7 @@
   </section>
 
   <!-- KEY FINDINGS -->
-  <section class="section">
+  <section class="section" id="findings">
     <p class="section-label">Key Findings</p>
     <h2>What the data showed</h2>
     <p>Four main factors came up as important: COVID itself, type of business, access to a housemaid, and family support. Here is what each one looked like in practice.</p>
@@ -631,7 +684,7 @@
   </section>
 
   <!-- LITERATURE REVIEW -->
-  <section class="section">
+  <section class="section" id="literature">
     <p class="section-label">Literature Review</p>
     <h2>What research from other countries found</h2>
     <p>Before this paper, most studies on women entrepreneurs during COVID focused on how businesses collapsed, not how new ones formed. This paper fills a gap specific to Bangladesh. Here is what the existing literature looked like.</p>
@@ -686,7 +739,7 @@
   </section>
 
   <!-- METHODOLOGY -->
-  <section class="section">
+  <section class="section" id="methodology">
     <p class="section-label">Methodology</p>
     <h2>How the study was done</h2>
     <p>This was a quantitative study using convenience sampling, meaning respondents were women entrepreneurs the researcher followed on Facebook. Questionnaires were sent via Google Forms, Messenger, and WhatsApp. Both close-ended and open-ended questions were used. Data was analyzed in STATA and Google Sheets.</p>
@@ -730,7 +783,7 @@
   </section>
 
   <!-- DISCUSSION -->
-  <section class="section">
+  <section class="section" id="discussion">
     <p class="section-label">Discussion</p>
     <h2>What the findings mean</h2>
     <p>The data points to three clear stories: what pushed women into online business, what shapes their decision to stay, and whether staying is actually realistic.</p>
@@ -760,7 +813,7 @@
   </section>
 
   <!-- CONCLUSION -->
-  <section class="section">
+  <section class="section" id="conclusion">
     <p class="section-label">Conclusion</p>
     <h2>So, did it work out for them?</h2>
     <p>For most of these women, yes. They started with low investment (often under BDT 20,000), got real customers through Facebook, and earned profits that most of them were satisfied with. The pandemic gave them a reason to start, and the support from family and housemaids gave them the time to do it.</p>
@@ -791,12 +844,27 @@
 </footer>
 
 <script>
-  // PROGRESS BAR
-  window.addEventListener('scroll', () => {
-    const el = document.getElementById('progress');
+  // PROGRESS BAR + ACTIVE NAV
+  const navLinks = document.querySelectorAll('.topnav a');
+  const sections = ['overview','respondents','findings','literature','methodology','discussion','conclusion'];
+
+  function updateNav() {
     const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-    el.style.width = pct + '%';
-  });
+    document.getElementById('progress').style.width = pct + '%';
+
+    let current = sections[0];
+    const navH = document.getElementById('topnav').offsetHeight + 8;
+    for (const id of sections) {
+      const el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top <= navH + 40) current = id;
+    }
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  }
+
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
 
   const WARM = {
     terracotta: '#B85C2C',
