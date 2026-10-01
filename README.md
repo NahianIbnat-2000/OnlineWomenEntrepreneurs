@@ -44,9 +44,7 @@ The convenience sample, small sample size and cross-sectional design mean the fi
 | `index.html` | Interactive web version of the paper, with charts, literature review, methodology and discussion |
 | `explainer.html` | Slideshow summarising the paper's main points |
 | [`Final_Project_Paper.pdf`](Final_Project_Paper.pdf) | The full research paper, including the questionnaire in the appendix |
-| `README.md` | This file |
 
-Both pages are static HTML. To view them locally, open the files in a browser. The charts on `index.html` load Chart.js from a CDN, so an internet connection is needed.
 
 ## Citation
 
